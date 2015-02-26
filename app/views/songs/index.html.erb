@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SONGS</title>
+</head>
+<body>
+<h1>All Songs:</h1>
+<ul>
+<% Song.all.each do |song| %>
+<li><a href="<%= rendered_path %>/songs/<%= song.to_slug %>.html"><%= song.name %></a></li>
+<% end %>
+</ul>
+</body>
+</html>
